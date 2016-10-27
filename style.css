@@ -1,0 +1,40 @@
+body {
+    /*background-image: url("images/PatternBG.jpg");*/
+    background: #efe7c3 url("images/flower.png") no-repeat fixed 0 400px;
+}
+
+#wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+.navbar-form {
+    border: 0;
+}
+
+.navbar-form > p {
+    font-family: 'Marck Script', cursive;
+    font-size: 2em;
+}
+
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+    width: 70%;
+    margin: auto;
+}
+
+#gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#gallery > figure img {
+    height: 400px;
+    margin-top: 20px;
+}
+
+figcaption {
+    text-align: center;
+}
