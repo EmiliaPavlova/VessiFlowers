@@ -1101,12 +1101,14 @@ textarea {
   line-height: inherit;
 }
 a {
-  color: #4582ec;
+  /*color: #4582ec;*/
+  color: #B86CAC;
   text-decoration: none;
 }
 a:hover,
 a:focus {
-  color: #134fb8;
+  /*color: #134fb8;*/
+  color: #24723C;
   text-decoration: underline;
 }
 a:focus {
@@ -6412,10 +6414,10 @@ button.close {
   background-color: rgba(0, 0, 0, 0);
 }
 .carousel-indicators .active {
-  margin: 0;
-  width: 12px;
-  height: 12px;
-  background-color: #ffffff;
+  /*margin: 0;*/
+  /*width: 12px;*/
+  /*height: 12px;*/
+  /*background-color: #ffffff;*/
 }
 .carousel-caption {
   position: absolute;
@@ -6456,7 +6458,8 @@ button.close {
     padding-bottom: 30px;
   }
   .carousel-indicators {
-    bottom: 20px;
+    /*bottom: 20px;*/
+    bottom: 0;
   }
 }
 .clearfix:before,
