@@ -1,4 +1,5 @@
 body {
+    height: auto;
     font-size: 16px;
     min-height: 800px;
     font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -6,20 +7,25 @@ body {
 
 .upper-flower,
 .bottom-flower {
-     background: url("images/flowers.png") 0 0 no-repeat;
-     width: 420px;
-     height: 350px;
+     background: url("images/ornament.png") 0 0 no-repeat;
+     width: 400px;
+     height: 300px;
     z-index: -1;
  }
 
 .upper-flower {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
 }
 
+.helper {
+    height: 100px;
+    position: relative;
+}
+
 .bottom-flower {
-    position: fixed;
+    position: absolute;
     bottom: 0;
     right: 0;
     -webkit-transform: rotate(180deg);
@@ -32,10 +38,7 @@ body {
 #wrapper {
     max-width: 1100px;
     margin: 0px auto;
-    /*background-color: #fff;*/
     position: relative;
-    /*border: 1px solid #fff;*/
-    /*border-radius: 4px;*/
 }
 
 .navbar-form {
@@ -44,7 +47,7 @@ body {
 
 .navbar-form > p {
     margin-top: 50px;
-    margin-left: 100px;
+    /*margin-left: 100px;*/
     padding: 2px 10px;
     font-family: 'Marck Script', cursive;
     font-size: 2em;
@@ -144,18 +147,18 @@ h4 {
 
 footer {
     height: 80px;
-    padding: 30px;
+    padding-top: 30px;
     /*background-color: #fff;*/
     /*border: 1px solid #fff;*/
 }
 
 footer div {
-    margin: 20px 10px 50px;
+    margin: 20px 10px 0;
 }
 
 footer div a {
     margin-bottom: 20px;
-    padding: 15px;
+    text-align: right;
     color: #000;
     font-size: 1.2em;
     background-color: rgba(255, 255, 255, 0.8);
