@@ -1,0 +1,70 @@
+﻿@model IEnumerable<MediaViewModel>
+@{ 
+    ViewBag.Title = "Галерия > Цветя";
+}
+
+<div id="content">
+
+    <div class="row hidden-mobile">
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+            <h1 class="page-title txt-color-blueDark">
+                <i class="fa-fw fa fa-picture-o"></i>
+                Галерия <span>
+                    >
+                    Цветя
+                </span>
+            </h1>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 text-align-right">
+            <div class="page-title">
+                @Html.ActionLink("Качи", "AddOrUpdate", new { id = 0, gtid = 1 }, new { @class = "btn btn-primary" })
+            </div>
+        </div>
+    </div>
+
+    <!-- row -->
+    <div class="row">
+
+        <!-- SuperBox -->
+        <div class="superbox col-sm-12">
+            
+            @foreach (var image in Model)
+            {
+                var thumbElements = image.Url.Split('/');
+                var thumbUrl = string.Format("/{0}/thumbs/{1}", thumbElements[1], thumbElements[2]);
+
+                <div class="superbox-list">
+                    <img src="@thumbUrl" data-img="@image.Url" alt="@image.Id" title="@image.Content" class="superbox-img">
+                </div>
+            }
+
+            <div class="superbox-float"></div>
+        </div>
+        <!-- /SuperBox -->
+
+        <div class="superbox-show" style="height:300px; display: none"></div>
+
+    </div>
+
+    <!-- end row -->
+
+</div>
+<!-- END MAIN CONTENT -->
+@section pagespecific {
+		<!-- PAGE RELATED PLUGIN(S) -->
+<script src="/scripts/plugin/superbox/superbox.js"></script>
+
+
+<script type="text/javascript">
+
+    // DO NOT REMOVE : GLOBAL FUNCTIONS!
+
+    $(document).ready(function () {
+
+        $('.superbox').SuperBox();
+
+    })
+
+</script>
+}

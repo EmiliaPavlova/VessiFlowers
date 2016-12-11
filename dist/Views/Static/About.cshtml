@@ -1,0 +1,13 @@
+﻿@model PageViewModel
+@{ 
+    ViewBag.Title = "За мен";
+}
+
+@if (Model != null)
+{
+    <div class="row">
+        <div class="col-lg-12">
+            @Html.Raw(Model.Content)
+        </div>
+    </div>
+}

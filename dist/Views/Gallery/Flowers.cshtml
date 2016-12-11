@@ -1,0 +1,35 @@
+﻿@model IEnumerable<MediaViewModel>
+@{ 
+    ViewBag.Title = "Цветя";
+}
+
+<div id="gallery" class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+
+    @foreach (var image in Model)
+    {
+        var thumbElements = image.Url.Split('/');
+        var thumbUrl = string.Format("/{0}/thumbs/{1}", thumbElements[1], thumbElements[2]);
+
+        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+            <a href="@image.Url" itemprop="contentUrl" data-size="@image.DataSize">
+                <img src="@thumbUrl" itemprop="thumbnail" alt="@image.Content" />
+            </a>
+
+            <figcaption itemprop="caption description">@image.Content</figcaption>
+        </figure>
+    }
+
+</div>
+<div class="row">
+    @Html.Partial("_PhotoSwipeRoot")
+</div>
+
+@section Scripts {
+    <script type="text/javascript" src="~/Scripts/photoswipe/photoswipe.js"></script>
+    <script type="text/javascript" src="~/Scripts/photoswipe/photoswipe-ui-default.js"></script>
+    <script type="text/javascript" src="~/Scripts/photoswipe/photoswipe-function.js"></script>
+    <script type="text/javascript" src="~/Scripts/photoswipe/photoswipe-init.js"></script>
+
+    @*@Scripts.Render("~/bundles/photoswipe")
+    @Scripts.Render("~/bundles/load-gallery")*@
+}
