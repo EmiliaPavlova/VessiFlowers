@@ -15,31 +15,16 @@
         -->
 
         <ul>
-            <li class="@Html.RouteIf("gallery", "active")">
-                <a href="#"><i class="fa fa-lg fa-fw fa-file-image-o"></i> <span class="menu-item-parent">Галерии</span></a>
-                <ul>
-                    <li class="@Html.RouteIf("gallery", "active")">
-                        <a href="@Url.Action("index", "gallery")">Цветя</a>
-                    </li>
-                </ul>
-            </li>
+            @{
+                Html.RenderAction("Menu", "Gallery");
+            }
 
             <li class="@Html.RouteIf("page", "active")">
-                <a href="#"><i class="fa fa-lg fa-fw fa-file-o"></i> <span class="menu-item-parent">Статични страници</span></a>
-                <ul>
-                    <li class="@Html.RouteIf("page", "active")">
-                        <a href="@Url.Action("index", "page")"><span class="menu-item-parent">За мен</span></a>
-                    </li>
-                </ul>
+                <a href="@Url.Action("index", "page")"><i class="fa fa-lg fa-fw fa-file-o"></i> <span class="menu-item-parent">За мен</span></a>
             </li>
 
             <li class="@Html.RouteIf("blog", "active")">
-                <a href="#"><i class="fa fa-lg fa-fw fa-file-text-o"></i> <span class="menu-item-parent">Блог</span></a>
-                <ul>
-                    <li class="@Html.RouteIf("blog", "active")">
-                        <a href="@Url.Action("index", "blog")"><span class="menu-item-parent">Постове</span></a>
-                    </li>
-                </ul>
+                <a href="@Url.Action("index", "blog")"><i class="fa fa-lg fa-fw fa-file-text-o"></i> <span class="menu-item-parent">Блог</span></a>
             </li>
         </ul>
     </nav>
