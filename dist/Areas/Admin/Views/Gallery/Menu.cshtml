@@ -9,6 +9,10 @@
         <a href="#"><i class="fa fa-lg fa-fw fa-file-image-o"></i> <span class="menu-item-parent">@galleryType.Name</span></a>
         <ul>
 
+            <li>
+                @Html.ActionLink("Добави", "Create", "Gallery", new { id = galleryType.Id }, new { })
+            </li>
+
             @foreach (var gallery in galleryType.Galleries)
             {
                 <li>
