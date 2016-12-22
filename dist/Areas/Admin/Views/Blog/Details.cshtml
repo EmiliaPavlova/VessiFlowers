@@ -1,9 +1,9 @@
-﻿@model GalleryViewModel
+﻿@model PostViewModel
 @{
-    ViewBag.Title = "Галерия";
+    ViewBag.Title = "Блог";
     if (Model != null)
     {
-        ViewBag.Title = string.Format("{0} > {1} > {2}", ViewBag.Title, Model.GalleryTypeName, Model.Position);
+        ViewBag.Title = string.Format("{0} > {1}", ViewBag.Title, Model.Title);
     }
 }
 
@@ -19,7 +19,7 @@
 
         <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 text-align-right">
             <div class="page-title">
-                @Html.ActionLink("Качи снимка", "AddOrUpdateImage", new { id = 0, gid = Model != null ? Model.Id : 0 }, new { @class = "btn btn-primary" })
+                @Html.ActionLink("Качи снимка", "AddOrUpdateImage", new { id = 0, pid = Model != null ? Model.Id : 0 }, new { @class = "btn btn-primary" })
             </div>
         </div>
     </div>
@@ -34,26 +34,34 @@
                 <div class="form-horizontal">
 
                     <div class="form-group">
-                        @Html.LabelFor(model => model.GalleryTypeId, htmlAttributes: new { @class = "control-label col-md-2" })
-                        <div class="col-md-10">
-                            @Html.DropDownListFor(model => model.GalleryTypeId, (IEnumerable<SelectListItem>)ViewBag.GalleryTypes, "Моля изберете", new { @class = "form-control" })
-                            @Html.ValidationMessageFor(model => model.GalleryTypeId, "", new { @class = "text-danger" })
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        @Html.LabelFor(model => model.Position, htmlAttributes: new { @class = "control-label col-md-2" })
-                        <div class="col-md-10">
-                            @Html.TextBoxFor(model => model.Position, new { @class = "form-control" })
-                            @Html.ValidationMessageFor(model => model.Position, "", new { @class = "text-danger" })
+                        @Html.LabelFor(model => model.Created, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-xs-10">
+                            @Html.EditorFor(model => model.Created, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Created, "", new { @class = "text-danger" })
                         </div>
                     </div>
 
                     <div class="form-group">
                         @Html.LabelFor(model => model.Title, htmlAttributes: new { @class = "control-label col-md-2" })
                         <div class="col-md-10">
-                            @Html.TextBoxFor(model => model.Title, new { @class = "form-control" })
+                            @Html.EditorFor(model => model.Title, new { htmlAttributes = new { @class = "form-control" } })
                             @Html.ValidationMessageFor(model => model.Title, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Content, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Content, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Content, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.IsActive, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.IsActive, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.IsActive, "", new { @class = "text-danger" })
                         </div>
                     </div>
 
@@ -95,11 +103,11 @@
 
     <!-- end row -->
 
-    @using (Html.BeginForm("Remove", "Gallery"))
+    @using (Html.BeginForm("Remove", "Blog"))
     {
         @Html.AntiForgeryToken()
         @Html.HiddenFor(model => model.Id)
-        <input type="submit" class="btn btn-danger pull-right" value="Изтрии галерията" />
+        <input type="submit" class="btn btn-danger pull-right" value="Изтрии поста" />
     }
 
 </div>
@@ -116,7 +124,7 @@
     $(document).ready(function () {
 
         $('.superbox').SuperBox({
-            type: 'gallery'
+            type: 'blog'
         });
 
     })

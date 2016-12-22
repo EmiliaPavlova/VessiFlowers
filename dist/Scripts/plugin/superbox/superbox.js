@@ -48,8 +48,8 @@
 				superboximg.find('>:first-child').text(imgTitle);
 				superboximg.find('.superbox-img-description').text(imgDescription);
 
-				superboximg.find("#edit-btn").attr("href", "/admin/gallery/addorupdateimage/" + imgDescription);
-				superboximg.find("#delete-btn").attr("href", "/admin/gallery/delete/" + imgDescription);
+				superboximg.find("#edit-btn").attr("href", "/admin/" + options.type + "/addorupdateimage/" + imgDescription);
+				superboximg.find("#delete-btn").attr("href", "/admin/" + options.type + "/delete/" + imgDescription);
 				
 				//console.log("fierd")
 				

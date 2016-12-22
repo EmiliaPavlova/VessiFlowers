@@ -17,7 +17,7 @@
                 var thumbUrl = string.Format("/{0}/thumbs/{1}", thumbElements[1], thumbElements[2]);
 
                 <figure>
-                    <img src="@thumbUrl" alt="figure">
+                    <a href="@Url.Action("Detail", "Gallery", new { id = gallery.Id })" target="_blank"><img src="@thumbUrl" alt="figure"></a> 
                     <figcaption>
                         @Html.ActionLink(gallery.Title, "Detail", "Gallery", new { id = gallery.Id }, new { target = "_blank" })
                     </figcaption>
