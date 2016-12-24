@@ -1,8 +1,17 @@
-﻿@model GalleryViewModel
+﻿@model PostViewModel
 
 @{
-    ViewBag.Title = Model != null ? Model.Title : " Галерия";
+    ViewBag.Title = "Пост";
 }
+
+<div class="row text-center">
+    <div class="col-md-12">
+        <h3 class="margin-top-0">@Model.Title <br><small class="font-xs"><i>Публикувано на @Model.Created.ToShortDateString() от @Model.Author</i></small></h3>
+        <p>
+            @Html.Raw(Model.Content)
+        </p>
+    </div>
+</div>
 
 <!-- Carousel -->
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -16,15 +25,15 @@
             {
                 if (i == 0)
                 {
-                    <div class="item active">
-                        <img src="@images[i].Url" alt="@Model.Title">
-                    </div>
+        <div class="item active">
+            <img src="@images[i].Url" alt="@Model.Title">
+        </div>
                 }
                 else
                 {
-                    <div class="item">
-                        <img src="@images[i].Url" alt="@Model.Title">
-                    </div>
+        <div class="item">
+            <img src="@images[i].Url" alt="@Model.Title">
+        </div>
                 }
             }
         }
@@ -51,7 +60,7 @@
             var image = images[i];
             var thumbElements = image.Url.Split('/');
             var thumbUrl = string.Format("/{0}/thumbs/{1}", thumbElements[1], thumbElements[2]);
-            <img data-target="#myCarousel" data-slide-to="@i" src="@thumbUrl" alt="@Model.Title" />
+    <img data-target="#myCarousel" data-slide-to="@i" src="@thumbUrl" alt="@Model.Title" />
         }
     }
 </div>
