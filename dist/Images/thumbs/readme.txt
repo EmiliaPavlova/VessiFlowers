@@ -1,1 +1,0 @@
-﻿This folder contains thumbnails for the images
