@@ -1,0 +1,29 @@
+﻿@model GalleryTypeViewModel
+@{ 
+    ViewBag.Title = Model != null ? Model.Name : "Галерия";
+}
+
+<div id="gallery">
+
+    @if (Model != null)
+    {
+
+        foreach (var gallery in Model.Galleries)
+        {
+            if (gallery.Images.Count > 0)
+            {
+                var image = gallery.Images.First();
+                var thumbElements = image.Url.Split('/');
+                var thumbUrl = string.Format("/{0}/thumbs/{1}", thumbElements[1], thumbElements[2]);
+
+                <figure>
+                    <a href="@Url.Action("Details", "Gallery", new { id = gallery.Id })" target="_blank"><img src="@thumbUrl" alt="figure"></a> 
+                    <figcaption>
+                        @Html.ActionLink(gallery.Title, "Details", "Gallery", new { id = gallery.Id }, new { target = "_blank" })
+                    </figcaption>
+                </figure>
+            }
+        }
+    }
+
+</div>

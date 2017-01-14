@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>@ViewBag.Title</title>
+
+    <!-- Basic Styles -->
+    @Styles.Render("~/bundles/style")
+
+    <link href="https://fonts.googleapis.com/css?family=Marck+Script" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/fav.png" />
+</head>
+<body>
+    <div class="upper-flower"></div>
+
+    <div id="wrapper">
+        @Html.Partial("_Menu")
+        @RenderBody()
+        @Html.Partial("_Footer")
+    </div>
+
+    <div class="helper">
+        <div class="bottom-flower"></div>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/script")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
