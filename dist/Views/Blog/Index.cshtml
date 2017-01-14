@@ -27,3 +27,7 @@
     </div>
     <hr>
 }
+@if (ViewBag.Pager != null)
+{
+        @Html.Partial("_Pager", (Pager)ViewBag.Pager)
+}
