@@ -23,9 +23,9 @@
                 <a href="@Url.Action("index", "page")"><i class="fa fa-lg fa-fw fa-file-o"></i> <span class="menu-item-parent">За мен</span></a>
             </li>
 
-            <li class="@Html.RouteIf("blog", "active")">
-                <a href="@Url.Action("index", "blog")"><i class="fa fa-lg fa-fw fa-file-text-o"></i> <span class="menu-item-parent">Блог</span></a>
-            </li>
+            @{
+                Html.RenderAction("Posts", "Blog");
+            }
         </ul>
     </nav>
     <span class="minifyme" data-action="minifyMenu">
