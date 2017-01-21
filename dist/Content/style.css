@@ -7,11 +7,11 @@ body {
 
 .upper-flower,
 .bottom-flower {
-     background: url("/Images/ornament.png") 0 0 no-repeat;
-     width: 500px;
-     height: 760px;
+    background: url("/Images/ornament.png") 0 0 no-repeat;
+    width: 500px;
+    height: 760px;
     z-index: -1;
- }
+}
 
 .upper-flower {
     position: absolute;
@@ -87,13 +87,22 @@ body {
 
 #gallery {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
+    flex-direction: row;
+}
+
+#gallery > figure {
+    width: 300px;
+    overflow: hidden;
 }
 
 #gallery > figure img {
-    height: 400px;
-    margin: 20px;
+    height: 100%;
+    width: auto;
+    -webkit-transform: translate(-25%,-25%);
+    -ms-transform: translate(-25%,-25%);
+    transform: translate(-25%,-25%);
 }
 
 #myCarousel {
@@ -126,6 +135,10 @@ figcaption {
 .first {
     width: 100%;
     margin-left: 30px;
+}
+
+.carousel-indicators img {
+    margin-bottom: 5px;
 }
 
 #article {
