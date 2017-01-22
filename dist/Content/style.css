@@ -159,6 +159,19 @@ h4 {
     margin-bottom: 30px;
 }
 
+form {
+    width: 50%;
+}
+
+form label {
+    width: 100%;
+}
+
+textarea {
+    display: block;
+    width: 100%;
+}
+
 footer {
     height: 80px;
     padding-top: 30px;
