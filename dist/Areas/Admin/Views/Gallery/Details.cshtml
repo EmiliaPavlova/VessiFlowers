@@ -19,13 +19,18 @@
 
         <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 text-align-right">
             <div class="page-title">
-                @Html.ActionLink("Качи снимка", "AddOrUpdateImage", new { id = 0, gid = Model != null ? Model.Id : 0 }, new { @class = "btn btn-primary" })
+                @using (Html.BeginForm("Remove", "Gallery"))
+                {
+                    @Html.AntiForgeryToken()
+                    @Html.HiddenFor(model => model.Id)
+                    <input type="submit" class="btn btn-danger pull-right" value="Изтрии галерията" />
+                }
             </div>
         </div>
     </div>
 
     <div class="row">
-        <div class="col-lg-6 col-lg-offset-3">
+        <div class="col-lg-6">
             @using (Html.BeginForm())
             {
                 @Html.AntiForgeryToken()
@@ -58,7 +63,17 @@
                     </div>
 
                     <div class="form-group">
+                        @Html.LabelFor(model => model.Content, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.TextAreaFor(model => model.Content, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.Content, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
                         <div class="col-md-offset-2 col-md-10">
+                            @Html.ActionLink("Качи палитра", "AddOrUpdateImage", new { id = 0, gid = Model != null ? Model.Id : 0, isPalette = true }, new { @class = "btn btn-warning" })
+                            @Html.ActionLink("Качи снимка", "AddOrUpdateImage", new { id = 0, gid = Model != null ? Model.Id : 0 }, new { @class = "btn btn-primary" })
                             <input type="submit" value="Запази" class="btn btn-success" />
                         </div>
                     </div>
@@ -78,9 +93,10 @@
                 {
                     var thumbElements = image.Url.Split('/');
                     var thumbUrl = string.Format("/{0}/thumbs/{1}", thumbElements[1], thumbElements[2]);
+                    var param = string.Format("{0}?isPalette={1}", image.Id, image.IsPalette.ToString());
 
                     <div class="superbox-list">
-                        <img src="@thumbUrl" data-img="@thumbUrl" alt="@image.Id" title="@Model.Title" class="superbox-img">
+                        <img src="@thumbUrl" data-img="@thumbUrl" alt="@param" title="@Model.Title" class="superbox-img">
                     </div>
                 }
             }
@@ -94,13 +110,6 @@
     </div>
 
     <!-- end row -->
-
-    @using (Html.BeginForm("Remove", "Gallery"))
-    {
-        @Html.AntiForgeryToken()
-        @Html.HiddenFor(model => model.Id)
-        <input type="submit" class="btn btn-danger pull-right" value="Изтрии галерията" />
-    }
 
 </div>
 <!-- END MAIN CONTENT -->

@@ -26,6 +26,10 @@
             @{
                 Html.RenderAction("Posts", "Blog");
             }
+
+            <li class="@Html.RouteIf("page", "active")">
+                <a href="@Url.Action("bulletin", "page")"><i class="fa fa-lg fa-fw fa-file-o"></i> <span class="menu-item-parent">Бюлетин</span></a>
+            </li>
         </ul>
     </nav>
     <span class="minifyme" data-action="minifyMenu">
