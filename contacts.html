@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contacts</title>
+    <link rel="stylesheet" href="libs/css/bootstrap.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Marck+Script" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/fav.png" />
+    <script src="http://www.w3schools.com/lib/w3data.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div id="wrapper">
+    <div w3-include-html="menu.html"></div>
+
+    <form>
+        <div>
+            <label>Как мога да ти бъда полезна?<textarea required="required"></textarea></label>
+        </div>
+        <div>
+            <label>За какъв повод търсиш цветя?<textarea></textarea></label>
+        </div>
+        <div>
+            <label>Кога е твоята повод?<textarea></textarea></label>
+        </div>
+        <div>
+            <label>За какъв човек?<textarea></textarea></label>
+        </div>
+        <div>
+            <label>Кои са нейните/неговите любими цветя? А цветове?<textarea></textarea></label>
+        </div>
+        <div>
+            <label>Каква емоция искаш да събудиш у нея/у него?<textarea></textarea></label>
+        </div>
+        <div>
+            <label>Твоят е-мейл адрес е: <input type="email" required="required"></input></label>
+        </div>
+        <div>
+            <label>Има ли нещо друго, което съм пропуснала да те попитам?<textarea></textarea></label>
+        </div>
+        <input type="submit" value="Изпрати" />
+    </form>
+</div>
+
+<script>
+    w3IncludeHTML();
+</script>
+<script href="script.js"></script>
+
+</body>
+</html>
