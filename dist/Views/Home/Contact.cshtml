@@ -3,6 +3,11 @@
     ViewBag.Title = "За поръчка";
 }
 
+@if (!string.IsNullOrWhiteSpace(ViewBag.Message))
+{
+    <p>@ViewBag.Message</p>
+}
+
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()

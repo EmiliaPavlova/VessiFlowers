@@ -1,0 +1,23 @@
+﻿Как мога да ти бъда полезна?
+HowCanIHelpYou
+
+За какъв повод търсиш цветя?
+WhatIsYourParty
+
+Кога е твоят повод?
+WhenIsYourParty
+
+За какъв човек?
+WhatTypeIsTheMan
+
+Кои са нейните/неговите любими цветя? А цветове?
+HisHerFlowersColors
+
+Каква емоция искаш да събудиш у нея/у него?
+WhatAreYouGoingToDo
+
+Твоят е-мейл адрес е: 
+Email
+
+Има ли нещо друго, което съм пропуснала да те попитам?
+AmIMissingSomething
