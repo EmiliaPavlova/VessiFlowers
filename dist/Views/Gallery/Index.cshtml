@@ -15,11 +15,12 @@
                 var image = gallery.Images.First();
                 var thumbElements = image.Url.Split('/');
                 var thumbUrl = string.Format("/{0}/thumbs/{1}", thumbElements[1], thumbElements[2]);
+                var url = gallery.Title.Replace(" ", "-");
 
                 <figure>
-                    <a href="@Url.Action("Details", "Gallery", new { id = gallery.Id })" target="_blank"><img src="@thumbUrl" alt="figure"></a> 
+                    <a href="@url" target="_blank"><img src="@thumbUrl" alt="@gallery.Title"></a> 
                     <figcaption>
-                        @Html.ActionLink(gallery.Title, "Details", "Gallery", new { id = gallery.Id }, new { target = "_blank" })
+                        <a href="@url" target="_blank">@gallery.Title</a>
                     </figcaption>
                 </figure>
             }
