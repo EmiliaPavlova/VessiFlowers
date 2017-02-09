@@ -39,6 +39,7 @@
     @{ Html.RenderPartial("_Header", RenderSection("topright", false)); }
     @{ Html.RenderPartialIf("_Aside", Request.IsAuthenticated); }
     <div id="main" role="main">
+        @Html.Partial("_Notifications")
         @RenderBody()
     </div>
     @{ Html.RenderPartial("_Scripts", RenderSection("pagespecific", false)); }
