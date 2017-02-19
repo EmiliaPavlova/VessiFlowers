@@ -80,6 +80,15 @@ body {
     margin: 50px 164px;
     width: 800px;
 }
+.delivery-time,
+.price {
+    margin: 20px 164px;
+    width: 800px;
+}
+.delivery-time > span,
+.price > span {
+    color: #24723C;
+}
 #gallery {
     display: flex;
     justify-content: space-between;
@@ -181,6 +190,7 @@ footer div {
     margin: 20px 10px 0
 }
 footer div a {
+    margin-right: 100px;
     margin-bottom: 20px;
     text-align: right;
     color: #000;
@@ -198,6 +208,11 @@ footer div a:hover {
         height: 43px;
         margin: 4px
     }
+    .description,
+    .delivery-time,
+    .price {
+        width: 70%;
+    }
 }
 @media screen and (max-width: 760px) {
     .carousel-indicators img {
@@ -205,9 +220,13 @@ footer div a:hover {
         height: 28px;
         margin: 2px
     }
-    .description {
-        margin: 50px;
-        width: auto;
+    .description,
+    .delivery-time,
+    .price {
+        margin-left: 50px;
+    }
+    footer div {
+        text-align: right;
     }
 }
 @media screen and (max-width: 502px) {
