@@ -4,7 +4,10 @@
     ViewBag.Title = Model != null ? Model.Title : " Галерия";
 }
 
-<h2 class="text-center">@Model.Title</h2>
+@if (Model != null)
+{
+    <h2 class="text-center">@Model.Title</h2>
+}
 
 <!-- Carousel -->
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -58,14 +61,20 @@
     }
 </div>
 
-<p class="description">@Model.Content</p>
-
-@if (!string.IsNullOrWhiteSpace(Model.Duration))
+@if (Model != null)
 {
-    <div class="delivery-time"><span>Срок на изпълнение: </span>@Model.Duration</div>
-}
+    if (!string.IsNullOrWhiteSpace(Model.Content))
+    {
+        <p class="description">@Model.Content</p>
+    }
 
-@if (!string.IsNullOrWhiteSpace(Model.Price))
-{
-    <div class="price"><span>Цена: </span>@Model.Price</div>
+    if (!string.IsNullOrWhiteSpace(Model.Duration))
+    {
+        <div class="delivery-time"><span>Срок на изпълнение: </span>@Model.Duration</div>
+    }
+
+    if (!string.IsNullOrWhiteSpace(Model.Price))
+    {
+        <div class="price"><span>Цена: </span>@Model.Price</div>
+    }
 }
