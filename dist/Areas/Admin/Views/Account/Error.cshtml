@@ -3,10 +3,6 @@
     ViewBag.PageClass = "animated fadeInDown";
 }
 
-@section topright{
-    <span id="extr-page-header-space"> <span class="hidden-mobile">Need an account?</span> <a href="@Url.Action("register", "account")" class="btn btn-danger">Create account</a> </span>
-}
-
 <div id="content" class="container">
     <div class="row">
         @{ Html.RenderPartial("_ErrorText"); }
@@ -54,7 +50,6 @@
                     </footer>
                 </form>
             </div>
-            @{ Html.RenderPartial("_SocialMedia"); }
         </div>
     </div>
 </div>
