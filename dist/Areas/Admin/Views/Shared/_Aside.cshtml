@@ -23,6 +23,10 @@
                 <a href="@Url.Action("index", "page")"><i class="fa fa-lg fa-fw fa-file-o"></i> <span class="menu-item-parent">За мен</span></a>
             </li>
 
+            <li class="@Html.RouteIf("page", "active")">
+                <a href="@Url.Action("othersForMe", "page")"><i class="fa fa-lg fa-fw fa-file-o"></i> <span class="menu-item-parent">Другите за мен</span></a>
+            </li>
+
             @{
                 Html.RenderAction("Posts", "Blog");
             }

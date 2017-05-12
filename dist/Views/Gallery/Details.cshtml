@@ -63,11 +63,6 @@
 
 @if (Model != null)
 {
-    if (!string.IsNullOrWhiteSpace(Model.Content))
-    {
-        <p class="description">@Model.Content</p>
-    }
-
     if (!string.IsNullOrWhiteSpace(Model.Duration))
     {
         <div class="delivery-time"><span>Срок на изпълнение: </span>@Model.Duration</div>
@@ -77,4 +72,11 @@
     {
         <div class="price"><span>Цена: </span>@Model.Price</div>
     }
+
+    if (!string.IsNullOrWhiteSpace(Model.Content))
+    {
+        @Html.Raw(Model.Content)
+    }
+
+    <p class="pull-right">@Model.Created.ToShortDateString()</p>
 }
