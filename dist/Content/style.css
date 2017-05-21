@@ -81,12 +81,15 @@ body {
     width: 800px;
 }
 .delivery-time,
-.price {
+.price,
+.date,
+.content {
     margin: 20px 164px;
     width: 800px;
 }
 .delivery-time > span,
-.price > span {
+.price > span,
+.date > span {
     color: #24723C;
 }
 #gallery {
