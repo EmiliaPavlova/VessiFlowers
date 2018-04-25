@@ -1,1 +1,0 @@
-﻿initPhotoSwipeFromDOM('.my-gallery');
