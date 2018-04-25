@@ -1,0 +1,91 @@
+﻿@model ContactViewModel
+@{
+    ViewBag.Title = "За поръчка";
+}
+
+@if (!string.IsNullOrWhiteSpace(ViewBag.Message))
+{
+    <p>@ViewBag.Message</p>
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.HowCanIHelpYou, htmlAttributes: new { @class = "control-label col-md-4" })
+            <div class="col-md-7">
+                @Html.TextAreaFor(model => model.HowCanIHelpYou, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.HowCanIHelpYou, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.WhatIsYourParty, htmlAttributes: new { @class = "control-label col-md-4" })
+            <div class="col-md-7">
+                @Html.TextAreaFor(model => model.WhatIsYourParty, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.WhatIsYourParty, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.WhenIsYourParty, htmlAttributes: new { @class = "control-label col-md-4" })
+            <div class="col-md-7">
+                @Html.TextAreaFor(model => model.WhenIsYourParty, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.WhenIsYourParty, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.WhatTypeIsTheMan, htmlAttributes: new { @class = "control-label col-md-4" })
+            <div class="col-md-7">
+                @Html.TextAreaFor(model => model.WhatTypeIsTheMan, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.WhatTypeIsTheMan, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.HisHerFlowersColors, htmlAttributes: new { @class = "control-label col-md-4" })
+            <div class="col-md-7">
+                @Html.TextAreaFor(model => model.HisHerFlowersColors, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.HisHerFlowersColors, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.WhatAreYouGoingToDo, htmlAttributes: new { @class = "control-label col-md-4" })
+            <div class="col-md-7">
+                @Html.TextAreaFor(model => model.WhatAreYouGoingToDo, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.WhatAreYouGoingToDo, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-4" })
+            <div class="col-md-7">
+                @Html.TextBoxFor(model => model.Email, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.AmIMissingSomething, htmlAttributes: new { @class = "control-label col-md-4" })
+            <div class="col-md-7">
+                @Html.TextAreaFor(model => model.AmIMissingSomething, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.AmIMissingSomething, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-4 col-md-7">
+                <input type="submit" value="Изпрати" class="btn btn-primary" />
+            </div>
+        </div>
+    </div>
+}
+
+@section scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

@@ -1,0 +1,101 @@
+﻿<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/flowers">Цветя</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Още нещо<span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="/spring">Пролет</a></li>
+                        <li class="divider"></li>
+                        <li><a href="/easter">За Великден</a></li>
+                        <li class="divider"></li>
+                        <li><a href="/autumn">Есен</a></li>
+                        <li class="divider"></li>
+                        <li><a href="/christmas">За Коледа</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Тържество<span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="/cakes">Торта от хартия</a></li>
+                        <li class="divider"></li>
+                        <li><a href="/crepe">Цветя от креп хартия</a></li>
+                        <li class="divider"></li>
+                        <li><a href="/beauties">Малки красоти</a></li>
+                        <li class="divider hidden"></li>
+                        <li class="hidden"><a href="/wedding">За сватба</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">За мен<span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="/about">Коя съм аз</a></li>
+                        <li><a href="/others-for-me">Другите за мен</a></li>
+                    </ul>
+                </li>
+                <li><a href="/blog">Блог</a></li>
+                <li class="dropdown hidden">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Контакт<span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="/contact">За поръчка</a></li>
+                        <li><a href="/schedule">За среща</a></li>
+                    </ul>
+                </li>
+                <li><a href="/contact">Контакт</a></li>
+                @if (Request.IsAuthenticated)
+                {
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Профил<span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            @if (User.IsInRole("Admin"))
+                            {
+                                <li><a href="/admin">Админ</a></li>
+                            }
+                            <li><a href="/schedule">График</a></li>
+                            <li><a href="/profile">Бюлетин</a></li>
+                            <li><a href="/change-password">Парола</a></li>
+                            @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm" }))
+                            {
+                                @Html.AntiForgeryToken()
+                                <li>
+                                    <a style="display: block;
+                                              padding: 3px 20px;
+                                              clear: both;
+                                              font-weight: normal;
+                                              line-height: 1.42857143;
+                                              color: #333;
+                                              white-space: nowrap;
+                                              font-size: 1.2em;
+                                              background-color: rgba(255,255,255,.8);
+                                              text-decoration: none;"
+                                       href="javascript:document.getElementById('logoutForm').submit()">
+                                        Изход
+                                    </a>
+                                </li>
+                            }
+                        </ul>
+                    </li>
+                }
+                else
+                {
+                    <li><a href="/login">Вход</a></li>
+                }
+
+                <li class="hidden"><a href="/diy">Аранжирай сам</a></li>
+            </ul>
+        </div>
+        <div class="navbar-form navbar-left">
+            <p>Украси живота си</p>
+        </div>
+    </div>
+</nav>

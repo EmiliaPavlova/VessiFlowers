@@ -1,0 +1,23 @@
+﻿<p>Как мога да ти бъда полезна?</p>
+<p>HowCanIHelpYou</p>
+<br>
+<p>За какъв повод търсиш цветя?</p>
+<p>WhatIsYourParty</p>
+<br>
+<p>Кога е твоят повод?</p>
+<p>WhenIsYourParty</p>
+<br>
+<p>За какъв човек?</p>
+<p>WhatTypeIsTheMan</p>
+<br>
+<p>Кои са нейните/неговите любими цветя? А цветове?</p>
+<p>HisHerFlowersColors</p>
+<br>
+<p>Каква емоция искаш да събудиш у нея/у него?</p>
+<p>WhatAreYouGoingToDo</p>
+<br>
+<p>Твоят е-мейл адрес е: </p>
+<p>Email</p>
+<br>
+<p>Има ли нещо друго, което съм пропуснала да те попитам, а е важно?</p>
+<p>AmIMissingSomething</p>

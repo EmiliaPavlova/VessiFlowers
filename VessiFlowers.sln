@@ -1,0 +1,141 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2027
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Applications", "Applications", "{6D8DAEDE-7FDB-421B-8AC1-283BC9F06194}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{C1072219-A8FA-4259-9D93-B68A817C9C9A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{58CC8334-40D9-4DAD-BC58-AF2B43C9264A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Business", "Business", "{7E84FB02-F040-4EB3-BA58-E0F28989093D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{1431B344-4156-4B3A-85AC-A37C43478C39}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{C27A5095-7CAD-45DA-AE0A-A01731D1813E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VessiFlowers.UnitTests", "Tests\VessiFlowers.UnitTests\VessiFlowers.UnitTests.csproj", "{38D1673E-36E3-4BE1-BC3F-560F6A218AA9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VessiFlowers.Data.Entities", "Domain\Data\VessiFlowers.Data.Entities\VessiFlowers.Data.Entities.csproj", "{7E40AA74-8F47-4127-8DA1-B2FD001999D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VessiFlowers.Data.Repositories", "Domain\Data\VessiFlowers.Data.Repositories\VessiFlowers.Data.Repositories.csproj", "{60E43BC6-1C6B-4CE8-AA50-E259D31A9EC3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VessiFlowers.Common.Localization", "Domain\Common\VessiFlowers.Common.Localization\VessiFlowers.Common.Localization.csproj", "{5174F6D7-3934-4E7E-A9ED-46BA5A0C8FAD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VessiFlowers.Common.Utilities", "Domain\Common\VessiFlowers.Common.Utilities\VessiFlowers.Common.Utilities.csproj", "{79294C36-6839-439A-9CA3-57CC15398077}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VessiFlowers.Business.Contracts", "Domain\Business\VessiFlowers.Business.Contracts\VessiFlowers.Business.Contracts.csproj", "{797659F2-E0B8-4108-9740-91D7DEB722B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VessiFlowers.Business.Models", "Domain\Business\VessiFlowers.Business.Models\VessiFlowers.Business.Models.csproj", "{D6D83A0E-14A1-4770-8009-DE991EB65C33}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VessiFlowers.Business.Services", "Domain\Business\VessiFlowers.Business.Services\VessiFlowers.Business.Services.csproj", "{3CDA5A0B-FED2-4920-89CE-747B0DDF784E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VessiFlowers.Web", "Applications\VessiFlowers.Web\VessiFlowers.Web.csproj", "{294EDBFA-5952-4E8C-9F5C-27F86413F775}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{38D1673E-36E3-4BE1-BC3F-560F6A218AA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38D1673E-36E3-4BE1-BC3F-560F6A218AA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38D1673E-36E3-4BE1-BC3F-560F6A218AA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38D1673E-36E3-4BE1-BC3F-560F6A218AA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E40AA74-8F47-4127-8DA1-B2FD001999D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E40AA74-8F47-4127-8DA1-B2FD001999D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E40AA74-8F47-4127-8DA1-B2FD001999D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E40AA74-8F47-4127-8DA1-B2FD001999D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60E43BC6-1C6B-4CE8-AA50-E259D31A9EC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60E43BC6-1C6B-4CE8-AA50-E259D31A9EC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60E43BC6-1C6B-4CE8-AA50-E259D31A9EC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60E43BC6-1C6B-4CE8-AA50-E259D31A9EC3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5174F6D7-3934-4E7E-A9ED-46BA5A0C8FAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5174F6D7-3934-4E7E-A9ED-46BA5A0C8FAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5174F6D7-3934-4E7E-A9ED-46BA5A0C8FAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5174F6D7-3934-4E7E-A9ED-46BA5A0C8FAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79294C36-6839-439A-9CA3-57CC15398077}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79294C36-6839-439A-9CA3-57CC15398077}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79294C36-6839-439A-9CA3-57CC15398077}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79294C36-6839-439A-9CA3-57CC15398077}.Release|Any CPU.Build.0 = Release|Any CPU
+		{797659F2-E0B8-4108-9740-91D7DEB722B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{797659F2-E0B8-4108-9740-91D7DEB722B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{797659F2-E0B8-4108-9740-91D7DEB722B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{797659F2-E0B8-4108-9740-91D7DEB722B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6D83A0E-14A1-4770-8009-DE991EB65C33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6D83A0E-14A1-4770-8009-DE991EB65C33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6D83A0E-14A1-4770-8009-DE991EB65C33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6D83A0E-14A1-4770-8009-DE991EB65C33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3CDA5A0B-FED2-4920-89CE-747B0DDF784E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CDA5A0B-FED2-4920-89CE-747B0DDF784E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CDA5A0B-FED2-4920-89CE-747B0DDF784E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CDA5A0B-FED2-4920-89CE-747B0DDF784E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{294EDBFA-5952-4E8C-9F5C-27F86413F775}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{294EDBFA-5952-4E8C-9F5C-27F86413F775}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{294EDBFA-5952-4E8C-9F5C-27F86413F775}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{294EDBFA-5952-4E8C-9F5C-27F86413F775}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7E84FB02-F040-4EB3-BA58-E0F28989093D} = {C1072219-A8FA-4259-9D93-B68A817C9C9A}
+		{1431B344-4156-4B3A-85AC-A37C43478C39} = {C1072219-A8FA-4259-9D93-B68A817C9C9A}
+		{C27A5095-7CAD-45DA-AE0A-A01731D1813E} = {C1072219-A8FA-4259-9D93-B68A817C9C9A}
+		{38D1673E-36E3-4BE1-BC3F-560F6A218AA9} = {58CC8334-40D9-4DAD-BC58-AF2B43C9264A}
+		{7E40AA74-8F47-4127-8DA1-B2FD001999D3} = {C27A5095-7CAD-45DA-AE0A-A01731D1813E}
+		{60E43BC6-1C6B-4CE8-AA50-E259D31A9EC3} = {C27A5095-7CAD-45DA-AE0A-A01731D1813E}
+		{5174F6D7-3934-4E7E-A9ED-46BA5A0C8FAD} = {1431B344-4156-4B3A-85AC-A37C43478C39}
+		{79294C36-6839-439A-9CA3-57CC15398077} = {1431B344-4156-4B3A-85AC-A37C43478C39}
+		{797659F2-E0B8-4108-9740-91D7DEB722B3} = {7E84FB02-F040-4EB3-BA58-E0F28989093D}
+		{D6D83A0E-14A1-4770-8009-DE991EB65C33} = {7E84FB02-F040-4EB3-BA58-E0F28989093D}
+		{3CDA5A0B-FED2-4920-89CE-747B0DDF784E} = {7E84FB02-F040-4EB3-BA58-E0F28989093D}
+		{294EDBFA-5952-4E8C-9F5C-27F86413F775} = {6D8DAEDE-7FDB-421B-8AC1-283BC9F06194}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F4E1E287-C5AB-4C15-BA3A-F9A77E5E8D7F}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 10
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://iliankostov.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Tests\\VessiFlowers.UnitTests\\VessiFlowers.UnitTests.csproj
+		SccProjectTopLevelParentUniqueName1 = VessiFlowers.sln
+		SccProjectName1 = Tests/VessiFlowers.UnitTests
+		SccLocalPath1 = Tests\\VessiFlowers.UnitTests
+		SccProjectUniqueName2 = Domain\\Data\\VessiFlowers.Data.Entities\\VessiFlowers.Data.Entities.csproj
+		SccProjectTopLevelParentUniqueName2 = VessiFlowers.sln
+		SccProjectName2 = Domain/Data/VessiFlowers.Data.Entities
+		SccLocalPath2 = Domain\\Data\\VessiFlowers.Data.Entities
+		SccProjectUniqueName3 = Domain\\Data\\VessiFlowers.Data.Repositories\\VessiFlowers.Data.Repositories.csproj
+		SccProjectTopLevelParentUniqueName3 = VessiFlowers.sln
+		SccProjectName3 = Domain/Data/VessiFlowers.Data.Repositories
+		SccLocalPath3 = Domain\\Data\\VessiFlowers.Data.Repositories
+		SccProjectUniqueName4 = Domain\\Common\\VessiFlowers.Common.Localization\\VessiFlowers.Common.Localization.csproj
+		SccProjectTopLevelParentUniqueName4 = VessiFlowers.sln
+		SccProjectName4 = Domain/Common/VessiFlowers.Common.Localization
+		SccLocalPath4 = Domain\\Common\\VessiFlowers.Common.Localization
+		SccProjectUniqueName5 = Domain\\Common\\VessiFlowers.Common.Utilities\\VessiFlowers.Common.Utilities.csproj
+		SccProjectTopLevelParentUniqueName5 = VessiFlowers.sln
+		SccProjectName5 = Domain/Common/VessiFlowers.Common.Utilities
+		SccLocalPath5 = Domain\\Common\\VessiFlowers.Common.Utilities
+		SccProjectUniqueName6 = Domain\\Business\\VessiFlowers.Business.Contracts\\VessiFlowers.Business.Contracts.csproj
+		SccProjectTopLevelParentUniqueName6 = VessiFlowers.sln
+		SccProjectName6 = Domain/Business/VessiFlowers.Business.Contracts
+		SccLocalPath6 = Domain\\Business\\VessiFlowers.Business.Contracts
+		SccProjectUniqueName7 = Domain\\Business\\VessiFlowers.Business.Models\\VessiFlowers.Business.Models.csproj
+		SccProjectTopLevelParentUniqueName7 = VessiFlowers.sln
+		SccProjectName7 = Domain/Business/VessiFlowers.Business.Models
+		SccLocalPath7 = Domain\\Business\\VessiFlowers.Business.Models
+		SccProjectUniqueName8 = Domain\\Business\\VessiFlowers.Business.Services\\VessiFlowers.Business.Services.csproj
+		SccProjectTopLevelParentUniqueName8 = VessiFlowers.sln
+		SccProjectName8 = Domain/Business/VessiFlowers.Business.Services
+		SccLocalPath8 = Domain\\Business\\VessiFlowers.Business.Services
+		SccProjectUniqueName9 = Applications\\VessiFlowers.Web\\VessiFlowers.Web.csproj
+		SccProjectTopLevelParentUniqueName9 = VessiFlowers.sln
+		SccProjectName9 = Applications/VessiFlowers.Web
+		SccLocalPath9 = Applications\\VessiFlowers.Web
+	EndGlobalSection
+EndGlobal
